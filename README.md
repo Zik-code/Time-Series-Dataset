@@ -1,11 +1,11 @@
 # Time-Series-Dataset
-这里是一些用作时序数据异常检测的常用数据集，包含原始数据文件和经过预处理后的文件。
+&emsp;&emsp;这里存放一些时序数据异常检测的常用数据集，包含原始数据文件和经过预处理后的文件。
 预处理后的文件统一为train.npy,test.npy,labels.npy,通过运行脚本查看处理后的文件信息 
 
  ```python
 processecd_data/dataset/.npy
 ```
-&emsp;&emsp;像这样 
+&emsp;&emsp;像这样运行脚本查看处理后的文件信息 。
 <img width="1446" height="522" alt="image" src="https://github.com/user-attachments/assets/c69a379a-995d-4297-97b8-cb09fbed8c28" />
 
 ## SMD
@@ -113,24 +113,23 @@ MSDS多源/多模式数据集由运行复杂分布式系统 (Openstack) 产生�
 处理后的训练集为29286，测试集也为29286。10个特征。
 
 ## NAB
-NAB 是一种新的基准，用于评估流式实时应用程序中的异常检测算法。它由超过 50 个标记的真实世界和人工时间序列数据文件 NAB数据集是Numenta公司开源的用于评估流式时序异常检测算法的公开数据集。它由超过50个带label的真实世界和人工时间序列数据文件组成。（包含了很多数据集，可以只取其中的部分用于研究，比如,TranAD模型中使用的是其中的realADExchage（在线点击率）数据。）
+&emsp;&emsp;NAB数据集是Numenta公司开源的用于评估流式时序异常检测算法的公开数据集。它由超过50个带label的真实世界和人工时间序列数据文件组成，包含了很多数据集，主要包含交通，广告点击率，机器等数据可以只取其中的部分用于研究，比如,TranAD模型中使用的是其中的realADExchage（在线点击率）数据。
 
-[数据集链接](https://github.com/numenta/NAB/tree/master/data)
-数据真实数据集和人生生成的数据集
-详情请看：[官方文档](https://github.com/numenta/NAB/blob/master/data/README.md)
-主要包含交通，广告点击率，机器等数据
+&emsp;&emsp;[数据集链接](https://github.com/numenta/NAB/tree/master/data)
+
+&emsp;&emsp;详情请看：[官方文档](https://github.com/numenta/NAB/blob/master/data/README.md)
+
 <img width="865" height="228" alt="image" src="https://github.com/user-attachments/assets/2b1914d4-0c82-466a-adef-c8a10a994f42" />
 
  
-打开一个数据的格式。所有的数据已经标准化，都是两列，一列是timestamp，另外一列是value值。
+&emsp;&emsp;打开一个数据的格式。所有的数据已经标准化，都是两列，一列是timestamp，另外一列是value值。
  
 <img width="865" height="498" alt="image" src="https://github.com/user-attachments/assets/e45c4585-d0c1-429b-a2d9-b983515bc41b" />
 
-label数据在：https://github.com/numenta/NAB/tree/master/labels/raw，格式如下，保存格式是json
+&emsp;&emsp;label数据在：https://github.com/numenta/NAB/tree/master/labels/raw，格式如下，保存格式是json
 <img width="865" height="299" alt="image" src="https://github.com/user-attachments/assets/543df85f-cbef-4c14-955a-fd730f762b37" />
-
  
-label中key是文件名，value是一个list，里面包含异常的点的timestamp。
+&emsp;&emsp;label中key是文件名，value是一个list，里面包含异常的点的timestamp。
 <img width="865" height="708" alt="image" src="https://github.com/user-attachments/assets/b6040bbb-81ec-4d20-b4d1-dc44564b7ae8" />
 
  
