@@ -63,6 +63,8 @@ labeled_anomalies.csv的列信息：
 * &nbsp;&nbsp;anomaly_sequences：流中真实异常的开始和结束索引，对应test中chan_id文件中的index为此范围的为异常序列。
 * &nbsp;&nbsp;Class：异常分类。Point or contextual。
 * &nbsp;&nbsp;num_values：每个流中遥测值的数量，对应chan_id的test文件的时间戳数量。
+  <img width="1308" height="378" alt="image" src="https://github.com/user-attachments/assets/0346d34d-2b3e-4ed8-b42b-a4dc10d7ed49" />
+
 
 #### 预处理后的文件
 &emsp;&emsp;预处理后的数据集放在了SMAP目录下。为了后续工作能更好的开展，也有将55个channel的数据分开的数据集。
