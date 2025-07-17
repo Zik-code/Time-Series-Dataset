@@ -1,7 +1,13 @@
 # Time-Series-Dataset
 这里是一些用作时序数据异常检测的常用数据集，包含原始数据文件和经过预处理后的文件。
-数据集
+预处理后的文件统一为train.npy,test.npy,labels.npy,通过运行脚本查看处理后的文件信息 
 
+ ```python
+processecd_data/dataset/.npy
+```
+&emsp;&emsp;像这样 
+
+![alt text](image.png)
 ## SMD
 **服务器机器数据集(Server Machine Dataset)**
 [数据集链接](https://github.com/NetManAIOps/OmniAnomaly)<br>
@@ -44,7 +50,8 @@ SMAP训练集不含异常数据，训练集的异常数据都由专家打上了�
 
 MSL训练集不含异常数据，训练集的异常数据都由专家打上了异常标签。MSL 的样本总共有 132,046 个，训练集58317，测试集73729，异常样本占比为 10.72%。 
 
-下表是异常序列以及异常比例的展示。
+下表是异常序列以及异常比例的展示。 
+
  <img width="722" height="269" alt="image" src="https://github.com/user-attachments/assets/b325a766-9991-42d9-9dfc-9e966dc62529" />
 
 #### 原文件
