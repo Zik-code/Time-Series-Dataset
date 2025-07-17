@@ -6,11 +6,12 @@
 processecd_data/dataset/.npy
 ```
 &emsp;&emsp;像这样 
+<img width="1446" height="522" alt="image" src="https://github.com/user-attachments/assets/c69a379a-995d-4297-97b8-cb09fbed8c28" />
 
-![alt text](image.png)
 ## SMD
 **服务器机器数据集(Server Machine Dataset)**
-[数据集链接](https://github.com/NetManAIOps/OmniAnomaly)<br>
+[数据集链接](https://github.com/NetManAIOps/OmniAnomaly) 
+
 &emsp;&emsp;SMD是从一家大型互联网公司获得的数据集，收集28个不同机器的数据，总的时间周期为五周。数据集被均等分为训练集和测试集，并且各包含28个实体，每个实体包含了38个维度，其中训练集数据有708,405个样本，测试集有708,420个样本（1416825），训练数据集中的异常由专家标记，最后选择28个实体的平均分数作为最终的异常得分。
 28个机器五周的数据，时间间隔1min，（五周总共有50400分钟，意味着每台机器要检测50401次，总共28台机器，则总共检测50401×28 = 1411228次）每个机器有38个特征。训练集和测试集的数据比例为1:1，适用于无监督异常检测模型。用SMD数据集跑模型的时候，28个机器的数据需要分开训练。
 #### 原文件
