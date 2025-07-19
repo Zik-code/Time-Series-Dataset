@@ -8,7 +8,8 @@ processecd_data/dataset/.npy
 &emsp;&emsp;像这样运行脚本查看处理后的文件信息 。
 <img width="1446" height="522" alt="image" src="https://github.com/user-attachments/assets/c69a379a-995d-4297-97b8-cb09fbed8c28" />
 
-## SMD
+## 详细数据集介绍
+### SMD
 **服务器机器数据集(Server Machine Dataset)**
 [数据集链接](https://github.com/NetManAIOps/OmniAnomaly) 
 
@@ -39,7 +40,7 @@ machine-1-1.txt,红圈中即38个维度。
 训练集一共708405条数据，测试集一共708420条数据。预处理的文件放在了processed_data/SMD文件夹下。
 处理后的文件命名：machine-x-y_train.npy ，machine-x-y_test.npy
 
-## SMAP & MSL
+### SMAP & MSL
 1. SMAP: 土壤湿度主动被动卫星(Soil Moisture Active Passive satellite)
 2. MSL: 火星科学实验室流浪者(Mars Science Laboratory rover)
    
@@ -69,7 +70,7 @@ labeled_anomalies.csv的列信息：
 #### 预处理后的文件
 &emsp;&emsp;预处理后的数据集放在了SMAP目录下。为了后续工作能更好的开展，也有将55个channel的数据分开的数据集。
 训练和测试数据的列名：
-## WADI
+### WADI
 **水分配系统数据集(Water Distribution，WaDi)** 
 
 &emsp;&emsp;WADI 数据集在iTrust官网申请数据集，申请通过后会向你的邮箱发送Google网盘链接。 
@@ -102,7 +103,7 @@ WADI_attackdataLABLE.csv：2天15次攻击（测试集）。
 129= 127特征数据 + 1 标签 + 1时间数据 
 
 
-## MSDS
+### MSDS
 **用于人工智能分析的多源分布式系统数据(Multi-Source Distributed System data，MSDS)**
 出处：
 Sasho Nedelkoski, Jasmin Bogatinovski, Ajay Kumar Mandapati, Soeren Becker, Jorge Cardoso, and Odej Kao. 2020. Multi-source distributed system data for AI-powered analytics. In European Conference on Service-Oriented and Cloud Computing. Springer, 161-176.
@@ -114,7 +115,7 @@ MSDS多源/多模式数据集由运行复杂分布式系统 (Openstack) 产生�
 3.预处理后的文件
 处理后的训练集为29286，测试集也为29286。10个特征。
 
-## NAB
+### NAB
 &emsp;&emsp;NAB数据集是Numenta公司开源的用于评估流式时序异常检测算法的公开数据集。它由超过50个带label的真实世界和人工时间序列数据文件组成，包含了很多数据集，主要包含交通，广告点击率，机器等数据可以只取其中的部分用于研究，比如,TranAD模型中使用的是其中的realADExchage（在线点击率）数据。
 
 &emsp;&emsp;[数据集链接](https://github.com/numenta/NAB/tree/master/data)
