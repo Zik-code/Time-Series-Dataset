@@ -3,7 +3,7 @@
 预处理后的文件统一为train.npy,test.npy,labels.npy,通过运行脚本查看处理后的文件信息 
 
  ```python
-python npy_info_viewer.py "processecd_data/SMAP/P-1_train.npy"
+python npy_info_viewer.py "processed_data/SMAP/P-1_train.npy"
 ```
 &emsp;&emsp;像这样运行脚本查看处理后的文件信息 。
 <img width="1446" height="522" alt="image" src="https://github.com/user-attachments/assets/c69a379a-995d-4297-97b8-cb09fbed8c28" />
