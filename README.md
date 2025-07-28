@@ -17,8 +17,8 @@
 | NAB-realTraffic [8] | Real | UTS | 15,662 |  |  | 10 | - | 1 | Urban events management |
 | NAB-realTweets [8] | Real | UTS | 158,511 |  |  | 7 | - | 1 | Business |
 | SMD [117] | Real | MTS | 160,390 | 708405 | 708420 | 1 | - | 25 | Industrial control systems |
-|  SMAP .[113]   |Real |  MTS  |  562800  |  135,183 |427,617|55| |25  |  Eviroment management |
-| **MSL [94]** | Real | MTS | 132,016 | 58,317 | 73,729 | 27 | 10.72 | 5 | Server machines monitoring |
+|  **SMAP**[113]   |Real |  MTS  |  562800  |  135,183 |427,617|55| |25  |  Eviroment management |
+| **MSL [94]** | Real | MTS | 132,046 | 58,317 | 73,729 | 27 | 10.72 | 5 | Server machines monitoring |
 | UCR [48] | Real | MTS/UTS | NA |  |  | NA | - | 1.88 | Urban events management |
 | SWaT [131] | Real | MTS | 946,719 | 496,800 | 449,919 | 1 | 11.98 | 51 | Server machines monitoring |
 | WADI [10] | Real | MTS | 1,221,372 | 1,048,571 | 172,801 | 1 | 5.99 | 127 | Astronomical studies |
