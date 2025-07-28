@@ -2,6 +2,35 @@
 &emsp;&emsp;这里存放一些时序数据异常检测的常用数据集，包含原始数据文件和经过预处理后的文件。<br>
 总结数据如表一：
 
+### Annotation Explanations
+- **MTS/UTS**: Multivariate/Univariate Time Serie
+- **# samples**: Total number of samples
+- **# entities**: Number of distinct time series
+- **# dim**: Number of metrics in Multivariate Time Series (MTS)
+- **Anomaly rate**: Percentage of anomalous samples relative to the total number of samples
+
+| Dataset/Benchmark | Real/Synth | MTS/UTS | Samples | train | test | Entities | Anomalies (%) | Dim | Domain |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| NAB-realAdExchange [8] | Real | MTS | 9,246 |  |  | 3 | - | 55 | Aerospace |
+| NAB-realAWSCloudwatch [8] | Real | MTS | 6,644 |  |  | 1 | - | 2 | Business |
+| NAB-realKnownCause [8] | Real | UTS | 6,198 |  |  | 7 | - | 1 | Multiple domains |
+| NAB-realTraffic [8] | Real | UTS | 15,662 |  |  | 10 | - | 1 | Urban events management |
+| NAB-realTweets [8] | Real | UTS | 158,511 |  |  | 7 | - | 1 | Business |
+| SMD [117] | Real | MTS | 160,390 | 708405 | 708420 | 1 | - | 25 | Industrial control systems |
+|  SMAP .[113]   |Real |  MTS  |  562800  |  135,183 |427,617|55| |25  |  Eviroment management |
+| **MSL [94]** | Real | MTS | 132,016 | 58,317 | 73,729 | 27 | 10.72 | 5 | Server machines monitoring |
+| UCR [48] | Real | MTS/UTS | NA |  |  | NA | - | 1.88 | Urban events management |
+| SWaT [131] | Real | MTS | 946,719 | 496,800 | 449,919 | 1 | 11.98 | 51 | Server machines monitoring |
+| WADI [10] | Real | MTS | 1,221,372 | 1,048,571 | 172,801 | 1 | 5.99 | 127 | Astronomical studies |
+
+(Note: Only the anomaly rates of MSL, SWaT, and WADI datasets are explicitly mentioned in the reference document; the anomaly rates of other datasets are not specified in this document, hence marked with "-".)
+
+
+
+
+
+
+
 | Dataset | Train   | Test    | Dimensions | Anomalies (%) |
 | :-----: | :-----: | :-----: | :--------: | :-----------: |
 |  NAB    |  4033   |  4033   |   1 (6)    |     0.92      |
