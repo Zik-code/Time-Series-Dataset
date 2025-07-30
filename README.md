@@ -1,4 +1,4 @@
-# 📊 时序异常检测数据集
+# 📊时序异常检测数据集
 &emsp;&emsp;这里存放一些时序数据异常检测的常用数据集，包含原始数据文件和经过预处理后的文件。<br>
 总结数据集如表一：
 
@@ -36,14 +36,14 @@ python npy_info_viewer.py "processed_data/SMAP/P-1_train.npy"
 <img width="1588" height="587" alt="image" src="https://github.com/user-attachments/assets/cfd3ccd6-9e5f-4be6-b392-5748ab113841" />
 
 
-## 详细数据集介绍
+## 🔍详细数据集介绍
 ### SMD
 **服务器机器数据集(Server Machine Dataset)**
 [数据集链接](https://github.com/NetManAIOps/OmniAnomaly) 
 
 &emsp;&emsp;SMD是从一家大型互联网公司获得的数据集，收集28个不同机器的数据，总的时间周期为五周。数据集被均等分为训练集和测试集，并且各包含28个实体，每个实体包含了38个维度，其中训练集数据有708,405个样本，测试集有708,420个样本（1416825），训练数据集中的异常由专家标记，最后选择28个实体的平均分数作为最终的异常得分。
 28个机器五周的数据，时间间隔1min，（五周总共有50400分钟，意味着每台机器要检测50401次，总共28台机器，则总共检测50401×28 = 1411228次）每个机器有38个特征。训练集和测试集的数据比例为1:1，适用于无监督异常检测模型。用SMD数据集跑模型的时候，28个机器的数据需要分开训练。
-#### 原文件
+#### 📁原文件
 &emsp;&emsp;28个机器分成了三组。（第一组有8个，第二组有9个，第三组10个）文件命名：machine-x-y.txt。第x组的第y个机器的特征。
 每一个machine-x-y代表一个具体的机器，
 原文件一共四个文件夹。分别是train，test，test_label，interpretation_label。
@@ -64,7 +64,7 @@ machine-1-1.txt,红圈中即38个维度。
 * interpretation_label：对于测试集中的异常数据，哪几个数据特征造成了最终的异常,只要有一个特征异常，本次测量就为异常，已验证interpretation_label中的异常区间和label中的异常值为1匹配，如下图右边的interpretation_label 中的392-416中的12,15特征异常，对应左边label中的392-416行值为1。
  <img width="865" height="495" alt="image" src="https://github.com/user-attachments/assets/e9f97ead-b5fc-40a7-bedd-64fd5fbc42ed" />
 
-#### 预处理后的文件
+#### 🛠️预处理后的文件
 训练集一共708405条数据，测试集一共708420条数据。预处理的文件放在了processed_data/SMD文件夹下。
 处理后的文件命名：machine-x-y_train.npy ，machine-x-y_test.npy
 
@@ -84,7 +84,7 @@ MSL训练集不含异常数据，训练集的异常数据都由专家打上了�
 
  <img width="722" height="269" alt="image" src="https://github.com/user-attachments/assets/b325a766-9991-42d9-9dfc-9e966dc62529" />
 
-#### 原文件
+#### 📁原文件
 MSL数据集与SMAP数据集在一个文件夹data下。
 labeled_anomalies.csv的列信息：
 * &nbsp;&nbsp;chan_id：匿名通道 ID - 第一个字母代表通道的性质（P = 功率，R = 辐射等），对应于train和test中对应名字的numpy文件。
@@ -95,7 +95,7 @@ labeled_anomalies.csv的列信息：
   <img width="1308" height="378" alt="image" src="https://github.com/user-attachments/assets/0346d34d-2b3e-4ed8-b42b-a4dc10d7ed49" />
 
 
-#### 预处理后的文件
+#### 🛠️预处理后的文件
 &emsp;&emsp;预处理后的数据集放在了SMAP目录下。为了后续工作能更好的开展，也有将55个channel的数据分开的数据集。
 训练和测试数据的列名：
 ### WADI
@@ -111,7 +111,7 @@ labeled_anomalies.csv的列信息：
 * &nbsp;&nbsp;WADI.A1_9 Oct 2017训练集一共有1209600条数据，测试集一共172800条数据。
 
 攻击场景：源自研究团队开发的攻击模型。攻击模型将CPS的意图空间(the intent space)视为攻击模型。两天内发起了15次攻击。
-#### 原文件
+#### 📁原文件
 WADI.A1_9 Oct 2017这个文件夹下有三个文件，分别是table_WADI、WADI_14days.csv和WADI_attackdata.csv。
 * &nbsp;&nbsp;table_WADI：记录了被攻击的时间段。
 * &nbsp;&nbsp;WADI_14days.csv：14天正常运行（训练集）。
@@ -122,7 +122,7 @@ table_WADI：记录了被攻击的时间段。
 WADI_14days_new.csv：14天正常运行（训练集），工厂在运行过程中的某些时段不稳定，删除了受影响的读数。
 WADI_attackdataLABLE.csv：2天15次攻击（测试集）。
 
-#### 预处理后的文件
+#### 🛠️预处理后的文件
 训练集一共有784570条数据，测试集一共172800条数据。使用的是WADI.A2_19 Nov 2019（新）标准。
 训练集 (784571, 128)  测试集  (172803, 129)
 128= 127 特征数据 + 1时间数据 
