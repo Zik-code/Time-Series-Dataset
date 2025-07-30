@@ -1,39 +1,31 @@
-# Time-Series-Dataset
+# 📊 时序异常检测数据集
 &emsp;&emsp;这里存放一些时序数据异常检测的常用数据集，包含原始数据文件和经过预处理后的文件。<br>
-总结数据如表一：
+总结数据集如表一：
 
-### Annotation Explanations
-- **MTS/UTS**: Multivariate/Univariate Time Serie
-- **# samples**: Total number of samples
-- **# dim**: Number of metrics in Multivariate Time Series (MTS)
-- **Anomaly rate**: Percentage of anomalous samples relative to the total number of samples
+### 列名解释
+- **Dataset**:数据集缩写
+- **Real/Synth**:真实数据集/合成数据集
+- **MTS/UTS**: 多变量时序数据集/单变量时序数据集
+- **samples**: 总样本数
+- **Train**: 训练集样本数
+- **Test**: 测试集样本数
+- **Anomaly Rate**: 异常率
+- **Dim**: 数据特征数（维度数）
+- **Domain**:数据集领域
 
-| Dataset/Benchmark | Real/Synth | MTS/UTS | Samples | train | test| Anomalies (%) | Dim | Domain |
+| Dataset| Real/Synth | MTS/UTS | Samples | Train | Test| Anomaly Rate (%) | Dim | Domain |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| *NAB-realAdExchange**| Real | MTS | 9,246 | 3 | - | 55 | Aerospace |
-| *NAB-realAWSCloudwatch** | Real | MTS | 6,644 |  |  | - | 2 | Business |
-| *NAB-realKnownCause** | Real | UTS | 6,198 |  |  | - | 1 | Multiple domains |
-| NAB-realTraffic** | Real | UTS | 15,662 |  |  | - | 1 | Urban events management |
-| NAB-realTweets** | Real | UTS | 158,511 |  |  | - | 1 | Business |
+| NAB-realAdExchange| Real | MTS | 9,246 | - | - | - |-|Aerospace|
+| NAB-realAWSCloudwatch| Real | MTS | 6,644 | - |  -| - | - | Business |
+| NAB-realKnownCause| Real | UTS | 6,198 |  -|-  | - | - | Multiple domains |
+| NAB-realTraffic| Real | UTS | 15,662 |  -| - | - | - | Urban events management |
+| NAB-realTweets| Real | UTS | 158,511 |  -|-  | - | - | Business |
 | **SMD** | Real | MTS | 160,390 | 708,405 | 708,420 | 4.16 |38| Industrial control systems |
 |  **SMAP**|Real |  MTS  |  562,800  |  135,183 |427,617| 12.8|25|  Eviroment management |
 | **MSL** | Real | MTS | 132,046 | 58,317 | 73,729 | 10.5 | 55 | Server machines monitoring |
-| UCR  | Real | MTS/UTS | NA |  |  | NA | - | 1.88 | Urban events management |
 | **SWaT** | Real | MTS | 944,919 | 495,000 | 449,919 | 12.1 | 51 | Server machines monitoring |
-| WADI| Real | MTS | 1,221,372 | 1,048,571 | 172,801 | 5.99 | 127 | Astronomical studies |
+| **WADI**| Real | MTS | 1,221,372 | 1,048,571 | 172,801 | 5.99 | 123 | Astronomical studies |
 
-
-| Dataset | Train   | Test    | Dimensions | Anomalies (%) |
-| :-----: | :-----: | :-----: | :--------: | :-----------: |
-|  NAB    |  4033   |  4033   |   1 (6)    |     0.92      |
-|  UCR    |  1600   |  5900   |   1 (4)    |     1.88      |
-|  MBA    | 100000  | 100000  |   2 (8)    |     0.14      |
-|  SMAP   | 135183  | 427617  |  25 (55)   |     13.13     |
-|  MSL    |  58317  |  73729  |   55 (3)   |     10.72     |
-|  SWaT   | 496800  | 449919  |   51 (1)   |     11.98     |
-|  WADI   | 1048571 | 172801  |  123 (1)   |     5.99      |
-|  SMD    | 708405  | 708420  |   38 (4)   |     4.16      |
-|  MSDS   | 146430  | 146430  |   10 (1)   |     5.37      | 
 
 预处理后的文件统一为train.npy,test.npy,labels.npy,通过运行脚本查看处理后的文件信息。 
 
@@ -77,8 +69,8 @@ machine-1-1.txt,红圈中即38个维度。
 处理后的文件命名：machine-x-y_train.npy ，machine-x-y_test.npy
 
 ### SMAP & MSL
-1. SMAP: 土壤湿度主动被动卫星(Soil Moisture Active Passive satellite)
-2. MSL: 火星科学实验室流浪者(Mars Science Laboratory rover)
+1. SMAP(Soil Moisture Active Passive satellite)[数据集链接](https://earthdata.nasa.gov/)
+2. MSL(Mars Science Laboratory rover)[数据集链接](https://earthdata.nasa.gov/)
    
 &emsp;&emsp;SMAP和MSL代表两个不同的产生遥测流的航天器，两个数据集分开
 * SMAP有55个channel（实体），每个channel有25个维度
@@ -107,10 +99,8 @@ labeled_anomalies.csv的列信息：
 &emsp;&emsp;预处理后的数据集放在了SMAP目录下。为了后续工作能更好的开展，也有将55个channel的数据分开的数据集。
 训练和测试数据的列名：
 ### WADI
-**水分配系统数据集(Water Distribution，WaDi)** 
-
+&emsp;&emsp;WADI(Water Distribution，WaDi)[数据集链接](https://itrust.sutd.edu.sg/itrust-labs_datasets/dataset_info/)
 &emsp;&emsp;WADI 数据集在iTrust官网申请数据集，申请通过后会向你的邮箱发送Google网盘链接。 
-[数据集链接](https://itrust.sutd.edu.sg/itrust-labs_datasets/dataset_info/)
 
 &emsp;&emsp;由Singapore University of Technology and Design收集。来自123个传感器和执行器的数据，一共127个特征。时间间隔1s。
 一共运行16天，14天正常运行，2天遭到了15次攻击。异常情景是被攻击的时间收集的传感器数据。 
@@ -140,9 +130,8 @@ WADI_attackdataLABLE.csv：2天15次攻击（测试集）。
 
 
 ### MSDS
-**用于人工智能分析的多源分布式系统数据(Multi-Source Distributed System data，MSDS)**
-出处：
-Sasho Nedelkoski, Jasmin Bogatinovski, Ajay Kumar Mandapati, Soeren Becker, Jorge Cardoso, and Odej Kao. 2020. Multi-source distributed system data for AI-powered analytics. In European Conference on Service-Oriented and Cloud Computing. Springer, 161-176.
+&emsp;&emsp;MSDS(Multi-Source Distributed System data，MSDS)[数据集获取链接](https://github.com/SashoNedelkoski/multi-source-observability-dataset)
+
 近年来，人们对IT运营人工智能 (AIOps) 的兴趣日益浓厚。该领域利用来自 IT 系统、大数据平台和机器学习的监控数据来自动化分布式系统的各种运营和维护 (O&M) 任务。
 MSDS多源/多模式数据集由运行复杂分布式系统 (Openstack) 产生的分布式跟踪、应用程序日志和指标组成。
 这个数据集是专门为人工智能操作建立的，包括自动异常检测、根本原因分析和补救。
@@ -152,12 +141,9 @@ MSDS多源/多模式数据集由运行复杂分布式系统 (Openstack) 产生�
 处理后的训练集为29286，测试集也为29286。10个特征。
 
 ### NAB
-&emsp;&emsp;NAB数据集是Numenta公司开源的用于评估流式时序异常检测算法的公开数据集。它由超过50个带label的真实世界和人工时间序列数据文件组成，包含了很多数据集，主要包含交通，广告点击率，机器等数据可以只取其中的部分用于研究，比如,TranAD模型中使用的是其中的realADExchage（在线点击率）数据。
-
-&emsp;&emsp;[数据集链接](https://github.com/numenta/NAB/tree/master/data)
-
-&emsp;&emsp;详情请看：[官方文档](https://github.com/numenta/NAB/blob/master/data/README.md)
-
+&emsp;&emsp;NAB数据集是Numenta公司开源的用于评估流式时序异常检测算法的公开数据集。[数据集链接](https://github.com/numenta/NAB/tree/master/data)<br>
+&emsp;&emsp;它由超过50个带label的真实世界和人工时间序列数据文件组成，包含了很多数据集，主要包含交通，广告点击率，机器等数据可以只取其中的部分用于研究，比如,TranAD模型中使用的是其中的realADExchage（在线点击率）数据。<br>
+&emsp;&emsp;详情请看：[官方文档](https://github.com/numenta/NAB/blob/master/data/README.md)<br>
 <img width="865" height="228" alt="image" src="https://github.com/user-attachments/assets/2b1914d4-0c82-466a-adef-c8a10a994f42" />
 
  
@@ -172,13 +158,9 @@ MSDS多源/多模式数据集由运行复杂分布式系统 (Openstack) 产生�
 <img width="865" height="708" alt="image" src="https://github.com/user-attachments/assets/b6040bbb-81ec-4d20-b4d1-dc44564b7ae8" />
 
 ### SWAT
-SWat（Secure Water Treatment）<br>
-&emsp;&emsp;[数据集链接](https://itrust.sutd.edu.sg/itrust-labs_datasets/dataset_info)
-Singapore University of Technology and Design收集<br>
-信息:<br>
-51 个feature, 来自于 51 个传感器和执行器。<br>
-时间信息给出，train(2015.12.22 16:30:00 -> 2015.12.28 10:00:00). test(2015.12.28 10:00:00->2016.1.2 15:00:00).<br>
-一共连续11天数据， 7天正常操作下，4天阶段性受到attack，一共41次袭击。<br>
-时间粒度为1s<br>
-normal有v0和v1两个版本，v1是剔除掉无用的前30分钟数据，故采用normalv1和attackv0<br>
-原数据中label是normal和attack，统一替换为0和1<br>
+&emsp;&emsp;SWat（Secure Water Treatment）[数据集链接](https://itrust.sutd.edu.sg/itrust-labs_datasets/dataset_info)<br>
+&emsp;&emsp;由Singapore University of Technology and Design收集<br>
+&emsp;&emsp;信息:<br>
+&emsp;&emsp;51 个feature, 来自于 51 个传感器和执行器。<br>
+&emsp;&emsp;时间信息给出，train(2015.12.22 16:30:00 -> 2015.12.28 10:00:00). test(2015.12.28 10:00:00->2016.1.2 15:00:00).一共连续11天数据， 7天正常操作下，4天阶段性受到attack，一共41次袭击。时间粒度为1s。
+&emsp;&emsp;normal有v0和v1两个版本，v1是剔除掉无用的前30分钟数据，故采用normalv1和attackv0。原数据中label是normal和attack，统一替换为0和1<br>
