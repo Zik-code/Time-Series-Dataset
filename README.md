@@ -178,5 +178,14 @@ MSDS多源/多模式数据集由运行复杂分布式系统 (Openstack) 产生�
 &emsp;&emsp;label中key是文件名，value是一个list，里面包含异常的点的timestamp。
 <img width="865" height="708" alt="image" src="https://github.com/user-attachments/assets/b6040bbb-81ec-4d20-b4d1-dc44564b7ae8" />
 
- 
-
+### SWAT
+SWat（Secure Water Treatment）<br>
+&emsp;&emsp;[数据集链接](https://itrust.sutd.edu.sg/itrust-labs_datasets/dataset_info)
+Singapore University of Technology and Design收集<br>
+信息:<br>
+51 个feature, 来自于 51 个传感器和执行器。<br>
+时间信息给出，train(2015.12.22 16:30:00 -> 2015.12.28 10:00:00). test(2015.12.28 10:00:00->2016.1.2 15:00:00).<br>
+一共连续11天数据， 7天正常操作下，4天阶段性受到attack，一共41次袭击。<br>
+时间粒度为1s<br>
+normal有v0和v1两个版本，v1是剔除掉无用的前30分钟数据，故采用normalv1和attackv0<br>
+原数据中label是normal和attack，统一替换为0和1<br>
