@@ -22,8 +22,6 @@
 | **SWaT** | Real | MTS | 944,919 | 495,000 | 449,919 | 12.1 | 51 | Server machines monitoring |
 | WADI| Real | MTS | 1,221,372 | 1,048,571 | 172,801 | 5.99 | 127 | Astronomical studies |
 
-(Note: Only the anomaly rates of MSL, SWaT, and WADI datasets are explicitly mentioned in the reference document; the anomaly rates of other datasets are not specified in this document, hence marked with "-".)
-
 
 | Dataset | Train   | Test    | Dimensions | Anomalies (%) |
 | :-----: | :-----: | :-----: | :--------: | :-----------: |
@@ -43,7 +41,8 @@
 python npy_info_viewer.py "processed_data/SMAP/P-1_train.npy"
 ```
 &emsp;&emsp;像这样运行脚本查看处理后的文件信息 。
-<img width="1446" height="522" alt="image" src="https://github.com/user-attachments/assets/c69a379a-995d-4297-97b8-cb09fbed8c28" />
+<img width="1588" height="587" alt="image" src="https://github.com/user-attachments/assets/cfd3ccd6-9e5f-4be6-b392-5748ab113841" />
+
 
 ## 详细数据集介绍
 ### SMD
